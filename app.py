@@ -4,6 +4,7 @@ import plotly.express as px
 
 st.set_page_config(page_title="구글 트렌드 분석 대시보드", layout="wide")
 st.title("📊 구글 트렌드 키워드 분석")
+st.header(df_time.head())
 
 # 1. 시계열 데이터 분석 (multiTimeline)
 st.header("1. 시간별 검색 관심도 추이")
@@ -49,6 +50,7 @@ with col2:
     except:
 
         st.write("관련 검색어 데이터를 불러올 수 없습니다.")
+
 
 
 
