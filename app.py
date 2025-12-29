@@ -11,6 +11,7 @@ try:
     # 상단 2줄(메타데이터) 제외하고 읽기
     df_time = pd.read_csv("multiTimeline (1).csv", skiprows=2)
     df_time.head()
+    df_time.info()
     df_time.columns = ['월', '관심도']
     df_time['월'] = pd.to_datetime(df_time['월'])
     
@@ -50,3 +51,4 @@ with col2:
     except:
 
         st.write("관련 검색어 데이터를 불러올 수 없습니다.")
+
